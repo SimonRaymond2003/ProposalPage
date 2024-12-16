@@ -35,7 +35,7 @@
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 
 <style type="text/css">
@@ -63,7 +63,6 @@ if (window.hljs) {
 
 
 
-<link rel="stylesheet" href="styles.css" type="text/css" />
 
 
 
@@ -97,80 +96,6 @@ pre code {
 </style>
 
 
-<style type="text/css">
-.dropdown-submenu {
-  position: relative;
-}
-.dropdown-submenu>.dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -6px;
-  margin-left: -1px;
-  border-radius: 0 6px 6px 6px;
-}
-.dropdown-submenu:hover>.dropdown-menu {
-  display: block;
-}
-.dropdown-submenu>a:after {
-  display: block;
-  content: " ";
-  float: right;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-  border-width: 5px 0 5px 5px;
-  border-left-color: #cccccc;
-  margin-top: 5px;
-  margin-right: -10px;
-}
-.dropdown-submenu:hover>a:after {
-  border-left-color: #adb5bd;
-}
-.dropdown-submenu.pull-left {
-  float: none;
-}
-.dropdown-submenu.pull-left>.dropdown-menu {
-  left: -100%;
-  margin-left: 10px;
-  border-radius: 6px 0 6px 6px;
-}
-</style>
-
-<script type="text/javascript">
-// manage active state of menu based on current page
-$(document).ready(function () {
-  // active menu anchor
-  href = window.location.pathname
-  href = href.substr(href.lastIndexOf('/') + 1)
-  if (href === "")
-    href = "index.html";
-  var menuAnchor = $('a[href="' + href + '"]');
-
-  // mark the anchor link active (and if it's in a dropdown, also mark that active)
-  var dropdown = menuAnchor.closest('li.dropdown');
-  if (window.bootstrap) { // Bootstrap 4+
-    menuAnchor.addClass('active');
-    dropdown.find('> .dropdown-toggle').addClass('active');
-  } else { // Bootstrap 3
-    menuAnchor.parent().addClass('active');
-    dropdown.addClass('active');
-  }
-
-  // Navbar adjustments
-  var navHeight = $(".navbar").first().height() + 15;
-  var style = document.createElement('style');
-  var pt = "padding-top: " + navHeight + "px; ";
-  var mt = "margin-top: -" + navHeight + "px; ";
-  var css = "";
-  // offset scroll position for anchor links (for fixed navbar)
-  for (var i = 1; i <= 6; i++) {
-    css += ".section h" + i + "{ " + pt + mt + "}\n";
-  }
-  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
-  document.head.appendChild(style);
-});
-</script>
 
 <!-- tabsets -->
 
@@ -309,29 +234,6 @@ div.tocify {
 
 
 
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">Honours Proposal</a>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <li>
-  <a href="index.html">Home</a>
-</li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        
-      </ul>
-    </div><!--/.nav-collapse -->
-  </div><!--/.container -->
-</div><!--/.navbar -->
-
 <div id="header">
 
 
@@ -349,21 +251,21 @@ Contributing Factors for 4th Down Attempt Conversions in the NFL</h1>
 <div id="background" class="section level2">
 <h2>Background</h2>
 <p>The NFL is a multi-billion dollar industry that has seen rapid growth
-within the USA and internationally. Davis and End (2010) argue that
-successful NFL franchises have measurable economic impacts on their
-local areas. This growth has placed more and more importance on the
-performance of NFL teams as they fight to win games to increase the
-popularity of their team. Teams are willing to invest time and money
-into finding different strategies that assist their organization. One
-such area that has received much attention is the idea of maximizing the
-expected win percentages of teams. This leads teams to look to
-strategies that may be outside of the culture norm.</p>
+within the USA and internationally. Davis and End argue that successful
+NFL franchises have measurable economic impacts on their local areas.
+This growth has placed more and more importance on the performance of
+NFL teams as they fight to win games to increase the popularity of their
+team. Teams are willing to invest time and money into finding different
+strategies that assist their organization. One such area that has
+received much attention is the idea of maximizing the expected win
+percentages of teams. This leads teams to look to strategies that may be
+outside of the culture norm.</p>
 <p>For many years in the NFL there seemed to be a consistent standard
 that on 4th down your team will kick a field goal or punt the ball for
 better field position. The only exception being the dying moments in a
 game when teams are desperate. However data display tools have let us
 see an increase in the overall attempt percentage of teams on 4th down
-(Raymond, 2024). This is signalling a change in culture</p>
+(). This is signalling a change in culture</p>
 <p>In the NFL there has been a increasing feeling that teams need to be
 more aggressive on 4th downs. We have seen teams adopt this strategy.
 Most famously is the Detroit lion’s mentality since the arrival of their
@@ -372,9 +274,9 @@ to match their aggressive “biting off knee caps” mentality. While the
 lions have seen success for the first time in years they have also been
 criticized for their aggressive play calling. This was seen in the
 2023-24 playoff divisional round game in which the lions failed a 4th
-down attempt that was painted as unnecessary (Sporting News, 2024).
-After this failed 4th down attempt there seemed to be a shift in
-momentum and the lions lost the game.</p>
+down attempt that was painted as unnecessary . After this failed 4th
+down attempt there seemed to be a shift in momentum and the lions lost
+the game.</p>
 </div>
 <div id="research-problem" class="section level2">
 <h2>Research Problem</h2>
@@ -416,26 +318,26 @@ to poor performances in situations that are not similar to 4th down.</p>
 <h2>Risk aversion</h2>
 <p>Much of this problem revolves around the idea that NFL coaches are
 acting overly averse to risk which is lowering their expected wins.
-Romer (2006) found that teams had begun to move towards a more
-conservative or safe strategy in the NFL. He argues that teams value
-successful gambles more then the expected win percentage in a game. He
-theorizes that the poor decision making is either due to risk aversion
-or it is due to poor information.</p>
-<p>To further this point using matching analysis, Yam and Lopez (2018)
-quantified this conservative decision-making, finding that teams could
-gain approximately 0.4 wins per year by being more aggressive on fourth
+found that teams had begun to move towards a more conservative or safe
+strategy in the NFL. He argues that teams value successful gambles more
+then the expected win percentage in a game. He theorizes that the poor
+decision making is either due to risk aversion or it is due to poor
+information.</p>
+<p>To further this point using matching analysis, quantified this
+conservative decision-making, finding that teams could gain
+approximately 0.4 wins per year by being more aggressive on fourth
 downs.</p>
-<p>Goff and Locke (2019) found when revisiting Romer’s framework that
-Romer’s core findings are still held to be true. However they argue that
-overly conservative calls are not due to poor decision making. Instead
-they point to risk aversion as they estimate that coaches are willing to
-give up two-thirds of a expected point to avoid the uncertainty of
-fourth down attempts.</p>
+<p> found when revisiting Romer’s framework that Romer’s core findings
+are still held to be true. However they argue that overly conservative
+calls are not due to poor decision making. Instead they point to risk
+aversion as they estimate that coaches are willing to give up two-thirds
+of a expected point to avoid the uncertainty of fourth down
+attempts.</p>
 <p>On top of this, there seems to be evidence that coaches are more
-cautious when their job is on the line. Owens and Roach (2018) found
-that in the NCAA coaches are relatively more conservative when they are
-more likely to be fired. At the same time they found when a coach was
-likely to be promoted that the coach is more aggressive then normal.</p>
+cautious when their job is on the line. found that in the NCAA coaches
+are relatively more conservative when they are more likely to be fired.
+At the same time they found when a coach was likely to be promoted that
+the coach is more aggressive then normal.</p>
 </div>
 <div id="momentum" class="section level2">
 <h2>Momentum</h2>
@@ -443,43 +345,41 @@ likely to be promoted that the coach is more aggressive then normal.</p>
 they feel to have momentum? The most famous literature in this is on the
 fallacy of the “hot hand”. The hot hand is a cognitive bias that leads
 people to believe that a person who has a successful outcome is more
-likely to have a successful outcome in future attempts. Gilovich et
-al. (1985) investigated the “hot hand” and “shooting streaks” in basket
-ball. They found that both players and fans believed in the fallacy
-despite shots being independent of each other. Losak et al. (2023)
-similarly discovered that fantasy baseball users gravitated towards
-“hot” players. At the same time they were unable to identify a viable
-hot hand strategy in DraftKings DFS baseball.</p>
+likely to have a successful outcome in future attempts. investigated the
+“hot hand” and “shooting streaks” in basket ball. They found that both
+players and fans believed in the fallacy despite shots being independent
+of each other. similarly discovered that fantasy baseball users
+gravitated towards “hot” players. At the same time they were unable to
+identify a viable hot hand strategy in DraftKings DFS baseball.</p>
 <p>Despite these common findings there does seem to be some evidence of
-momentum existing in the NFL. Roebber et al.(2022, p. 2) defined
-momentum in the NFL as “the sustained increase in win probability by a
-single team over the course of at least 2 successive changes in
-possession”. With this definition they found that streaks of win
-probability in football are non-random and are in fact predictable with
-Artificial Neural Network Models.</p>
-<p>Lehman &amp; Hahn (2013) looked to identify momentum across and
-within games in the NFL. Within-period momentum was found to encourage
-teams to take more risks. Negative within-period momentum was in-turn
-found to encourage teams to take less risks. It was also discovered that
-across-period momentum has a effect only until a within period momentum
-was established in a game.</p>
+momentum existing in the NFL. defined momentum in the NFL as “the
+sustained increase in win probability by a single team over the course
+of at least 2 successive changes in possession”. With this definition
+they found that streaks of win probability in football are non-random
+and are in fact predictable with Artificial Neural Network Models.</p>
+<p> looked to identify momentum across and within games in the NFL.
+Within-period momentum was found to encourage teams to take more risks.
+Negative within-period momentum was in-turn found to encourage teams to
+take less risks. It was also discovered that across-period momentum has
+a effect only until a within period momentum was established in a
+game.</p>
 </div>
 <div id="heckman-correction" class="section level2">
 <h2>Heckman correction</h2>
 <p>The Heckman correction is a two-step estimation process that is used
-to correct for sample selection bias (Heckman, 1979). The first step is
-to estimate the probability of selection into the sample. The second
-step is to estimate the outcome of interest. Heckmans original paper was
-focused on applying probit and linear models for this method. However,
-due to the non-linearities in NFL data we will be looking to apply a
-non-parametric model to our situation. I am currently in the process of
-looking at recent literature and applications of self sample selection
-bias corrections with non-parametric models.</p>
+to correct for sample selection bias (). The first step is to estimate
+the probability of selection into the sample. The second step is to
+estimate the outcome of interest. Heckmans original paper was focused on
+applying probit and linear models for this method. However, due to the
+non-linearities in NFL data we will be looking to apply a non-parametric
+model to our situation. I am currently in the process of looking at
+recent literature and applications of self sample selection bias
+corrections with non-parametric models.</p>
 <p>Here are some papers that I will be looking at:</p>
 <ul>
-<li>Klein and Spady (1993)</li>
-<li>Das, Newey, and Vella (2003)</li>
-<li>Cook (2022)}</li>
+<li></li>
+<li></li>
+<li></li>
 </ul>
 </div>
 <div id="research-gap" class="section level2">
@@ -505,12 +405,12 @@ not having a effect on 4th down conversions.</p>
 <div id="play-by-play-pbp" class="section level2">
 <h2>Play by Play (PBP)</h2>
 <p>Our data consists of play by play data from the NFL. This data is
-pulled from the nflverse package in R (Carl et al., 2024). The data
-ranges from 2016 to 2023. The reason for this is that after 2016 the NFL
-started to put tracking chips in NFL player’s jerseys. This gives us
-information after 2016 of what players are on the field for each snap.
-As a note a weeks 16-18 in 2023 are missing gsis_ids of who was on the
-field and the data in 2016 is described as not as reliable.</p>
+pulled from the nflverse package in R (). The data ranges from 2016 to
+2023. The reason for this is that after 2016 the NFL started to put
+tracking chips in NFL player’s jerseys. This gives us information after
+2016 of what players are on the field for each snap. As a note a weeks
+16-18 in 2023 are missing gsis_ids of who was on the field and the data
+in 2016 is described as not as reliable.</p>
 <p>To create my data I have merged play by play data, participation
 data, roster data, and injury data. However, we may create different
 versions of our data depending on our models that we choose to use.</p>
@@ -530,14 +430,13 @@ and 1300+ columns. The 4th down attempts data set has 60,000+ rows and
 </div>
 <div id="pro-football-focus-pff" class="section level2">
 <h2>Pro Football Focus (PFF)</h2>
-<p>Our weekly player data is a combination of reports from Pro Football
-Focus, (2024) from 2016 to 2023. This data is downloaded in the form of
-different positional reports. For example, we downloaded the receiving
-reports labeled as “Receiving Grades, Receiving Depth, Receiving
-Concept, and Receiving vs Scheme”. Each row in these reports would be
-how a player did in certain areas covered by that report that week. This
-however is useless to us as we needed to merge every report into each
-other.</p>
+<p>Our weekly player data is a combination of reports from from 2016 to
+2023. This data is downloaded in the form of different positional
+reports. For example, we downloaded the receiving reports labeled as
+“Receiving Grades, Receiving Depth, Receiving Concept, and Receiving vs
+Scheme”. Each row in these reports would be how a player did in certain
+areas covered by that report that week. This however is useless to us as
+we needed to merge every report into each other.</p>
 <p>We ended up with a data set that is 158,000+ rows and 1,500+ columns.
 Each column is a different stat that may or may not apply to a player
 (e.g. a receiving grade does not apply to a DE).</p>
@@ -664,7 +563,7 @@ semester (names matching).</li>
 <h1>Begining Analysis</h1>
 <pre class="r"><code>model_3rd3 &lt;- read_csv(&quot;model_3rd3.csv&quot;)</code></pre>
 <pre><code>## Rows: 7022 Columns: 20
-## ── Column specification ───────────────────
+## ── Column specification ─────────────
 ## Delimiter: &quot;,&quot;
 ## dbl (20): week, ydstogo, yardline_100, posteam_timeouts_remaining, defteam_t...
 ## 
@@ -672,7 +571,7 @@ semester (names matching).</li>
 ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 <pre class="r"><code>model_4th3 &lt;- read_csv(&quot;model_4th3.csv&quot;)</code></pre>
 <pre><code>## Rows: 4226 Columns: 19
-## ── Column specification ───────────────────
+## ── Column specification ─────────────
 ## Delimiter: &quot;,&quot;
 ## dbl (19): week, attempt, ydstogo, yardline_100, minutes_remaining, posteam_t...
 ## 
@@ -1005,24 +904,24 @@ Out Of Bag results.</p>
 <pre class="r"><code># Print results
 print(importance_df)</code></pre>
 <pre><code>##        Variable           0           1 MeanDecreaseAccuracy MeanDecreaseGini
-## 1       ydstogo 125.4269824 183.2818606          193.5432330        327.60793
-## 2    score_diff  60.4299164 110.7947346          111.5743563        177.02412
-## 3       min_rem  60.1566875 100.0367519          102.8539127        193.93256
-## 4  yardline_100  45.1373398 105.2612785           91.4219768        200.11429
-## 5      offtimes  19.3535499  23.3109939           29.4424194         36.30884
-## 6      deftimes  20.5412507   4.2933397           20.9964538         26.19223
-## 7     down2_pct   1.7085776   5.8042999            4.6454135         75.50654
-## 8     down1_pct  -0.4045042   7.0423011            3.7189447         79.04593
-## 9          week  -1.3199223   8.1332725            3.5353990         59.00471
-## 10    down3_pct  -1.9806339   7.6795394            2.6598976         78.85979
-## 11         home  -2.4771793   5.6519962            1.3385270         14.63138
-## 12   random_var   0.8658669   0.9400077            1.2681888        106.79470
-## 13      KICKOFF   1.7673417  -1.9325312            0.4864511         14.01850
-## 14         dome  -2.1599300   1.8442765           -0.7063457         10.24486
-## 15     opp_scss  -3.6387216   2.5865796           -1.4687084         36.30426
-## 16         PUNT  -4.3943745   3.0799317           -2.0010136         12.81025
-## 17    opp_fails  -7.7064777   4.9857182           -3.7090732         38.59908
-## 18    prep_days  -5.2225004   0.6178269           -4.0869803         33.84337</code></pre>
+## 1       ydstogo 128.6954211 181.4020866         190.93217344        328.19266
+## 2    score_diff  63.4364301 107.9529888         112.63877829        176.70189
+## 3       min_rem  61.0056581 101.5765995         105.25199391        193.71662
+## 4  yardline_100  46.9461824 105.8365029          94.91931385        199.38863
+## 5      offtimes  18.6573277  25.3002167          30.05146536         36.28144
+## 6      deftimes  19.3428938   5.7543623          20.11665654         26.09367
+## 7          week   0.9122297  10.7662704           6.80515534         59.45495
+## 8     down2_pct   2.7711750   4.8422392           5.12154985         75.32021
+## 9     down1_pct  -0.2013584   6.9014191           4.03224091         78.73647
+## 10    down3_pct  -3.9015920   9.3417061           2.18212632         78.79706
+## 11      KICKOFF   2.5793693  -0.5953722           1.82663403         13.70897
+## 12         home  -3.2321817   4.5390479           0.08590064         14.65089
+## 13         dome  -1.5583562   1.5693642          -0.38511568         10.03248
+## 14         PUNT  -2.6732859   2.5024066          -0.84729951         12.79672
+## 15   random_var  -2.4606327   2.0706019          -0.90344618        107.34069
+## 16     opp_scss  -4.3412620   2.7833494          -1.98165242         36.48357
+## 17    opp_fails  -6.4845283   5.2951456          -2.60642708         38.78535
+## 18    prep_days  -5.3057667   2.2923039          -3.03117420         33.87779</code></pre>
 <pre class="r"><code>print(paste(&quot;OOB AUC:&quot;, round(oob_auc, 3)))</code></pre>
 <pre><code>## [1] &quot;OOB AUC: 0.882&quot;</code></pre>
 <pre class="r"><code># Plot variable importance
@@ -1054,28 +953,28 @@ model predicts conversion and is run with a ntree = 1500. We are
 reporting Out Of Bag results.</p>
 <pre class="r"><code># Print results
 print(importance_df)</code></pre>
-<pre><code>##        Variable           0           1 MeanDecreaseAccuracy MeanDecreaseGini
-## 1       ydstogo 83.26665400 112.1676465          136.9220685        450.02512
-## 2          rush  6.79767077  28.9799743           26.9681142         62.40020
-## 3  yardline_100 15.68403825  -5.4463463            9.1741667        317.55940
-## 4       min_rem  7.24924977  -0.9983970            5.1106713        346.79810
-## 5     down3_pct  5.37955294  -2.8463265            2.4025145        245.61015
-## 6      deftimes  3.94955487  -1.4916276            2.1993010         61.94590
-## 7       KICKOFF -2.14623883   4.3024908            1.1593640         43.15927
-## 8      opp_scss -3.66393066   5.2077364            0.6420642        113.77046
-## 9     down2_pct -1.14526603   2.2859712            0.5076803        239.48743
-## 10   score_diff -0.06393452   0.5884626            0.3698348        224.95638
-## 11   random_var  0.92795191  -0.8957709            0.1288689        348.71014
-## 12    opp_fails -1.47268877   1.5292666           -0.1133539        122.17104
-## 13         week  1.49873140  -2.0823813           -0.1436457        183.01867
-## 14         PUNT -2.63984251   1.9757790           -0.7685443         41.87193
-## 15         dome -1.26794601  -0.4688593           -1.2560488         31.98814
-## 16         home -0.97968398  -1.2480465           -1.6523660         42.09237
-## 17    down1_pct -4.12220699   1.7642212           -2.2109387        241.67618
-## 18    prep_days -1.76557363  -1.7704162           -2.5582438        107.70782
-## 19     offtimes -3.79308213  -3.3649059           -5.1973632         59.38586</code></pre>
+<pre><code>##        Variable          0             1 MeanDecreaseAccuracy MeanDecreaseGini
+## 1       ydstogo 83.0154997  1.170804e+02          137.4059442        450.93779
+## 2          rush  5.3552315  2.943384e+01           25.8840617         60.74959
+## 3  yardline_100 12.2173560 -4.896987e+00            6.6315675        316.18257
+## 4       min_rem  3.8162185 -2.484411e-01            2.8442419        347.25243
+## 5      deftimes  2.2041560 -4.737069e-01            1.4671006         61.84562
+## 6     opp_fails -2.2817420  4.023439e+00            0.8424367        122.57897
+## 7    score_diff  0.2775008  7.949896e-01            0.7538057        226.08950
+## 8     down3_pct  2.4483324 -2.511512e+00            0.1915744        244.13742
+## 9       KICKOFF -4.7212419  5.605999e+00           -0.1609615         43.31617
+## 10    down2_pct -2.4018046  2.540927e+00           -0.2385492        241.03270
+## 11         week  0.7210256 -1.323246e+00           -0.3615343        182.43879
+## 12     opp_scss -3.2839828  3.194074e+00           -0.5374814        114.83749
+## 13         PUNT -2.2011950  6.999266e-01           -1.3270207         42.57750
+## 14    prep_days  0.3901699 -2.790505e+00           -1.5109884        107.86508
+## 15         dome -3.2357074  3.400874e-01           -2.2713549         32.36928
+## 16         home -3.3354166 -4.922038e-01           -2.8912307         42.65959
+## 17   random_var -2.4519896 -1.640570e+00           -2.9330922        346.69584
+## 18     offtimes -5.1887242  8.583918e-04           -4.1418247         59.60974
+## 19    down1_pct -8.2198007  1.092242e+00           -5.9596816        242.55411</code></pre>
 <pre class="r"><code>print(paste(&quot;OOB AUC:&quot;, round(oob_auc, 3)))</code></pre>
-<pre><code>## [1] &quot;OOB AUC: 0.669&quot;</code></pre>
+<pre><code>## [1] &quot;OOB AUC: 0.668&quot;</code></pre>
 <pre class="r"><code># Plot variable importance
 varImpPlot(rf3,
            sort = TRUE,
@@ -1145,10 +1044,10 @@ abline(h = mean(auc) + 1.96 * sd(auc), col = &quot;green&quot;, lwd = 2, lty = 3
 <p><img src="index_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
 <pre class="r"><code># Print summary statistics
 cat(&quot;Mean AUC:&quot;, mean(auc), &quot;\n&quot;)</code></pre>
-<pre><code>## Mean AUC: 0.7948716</code></pre>
+<pre><code>## Mean AUC: 0.7945926</code></pre>
 <pre class="r"><code>cat(&quot;95% CI: [&quot;, mean(auc) - 1.96 * sd(auc), &quot;,&quot;, mean(auc) + 1.96 * sd(auc), &quot;]\n&quot;)</code></pre>
-<pre><code>## 95% CI: [ 0.7735098 , 0.8162334 ]</code></pre>
-<p>We see a significantly worse performance then with a random forest
+<pre><code>## 95% CI: [ 0.7727761 , 0.8164091 ]</code></pre>
+<p>We see a significant worse performance then with a random forest
 model.</p>
 </div>
 </div>
@@ -1210,13 +1109,15 @@ class="uri">https://ssrn.com/abstract=3114242</a> or <a
 href="http://dx.doi.org/10.2139/ssrn.3114242"
 class="uri">http://dx.doi.org/10.2139/ssrn.3114242</a></p>
 <p>Carl, S., Baldwin, B., Sharpe, L., Ho, T., Edwards, J. (2024).
-nflverse. Play-by-play data for NFL games. Retrieved from <a
+<strong>nflverse</strong>. Play-by-play data for NFL games. Retrieved
+from <a
 href="https://nflverse.nflverse.com/">https://nflverse.nflverse.com/</a>.</p>
 <p>Pro Football Focus (PFF). (2024). NFL Player Performance Data.
 Accessed via subscription at <a
 href="https://premium.pff.com/nfl/teams/2024/REGPO">https://premium.pff.com/nfl/teams/2024/REGPO</a>.</p>
-<p>Raymond, S. (2024). <em>4th Down Analysis App</em>. Interactive
-dashboard for analyzing 4th down decisions in the NFL. Available at: <a
+<p>Raymond, S. (2024). <strong>4th Down Analysis App</strong>.
+Interactive dashboard for analyzing 4th down decisions in the NFL.
+Available at: <a
 href="https://jzmtko-yigit-aydede.shinyapps.io/NFL_4th_Down_App/">https://jzmtko-yigit-aydede.shinyapps.io/NFL_4th_Down_App/</a>.</p>
 <p>Sporting News. (2024). Lions’ Dan Campbell criticized for fourth-down
 decisions in playoff loss to 49ers. Retrieved from <a
