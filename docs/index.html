@@ -357,24 +357,24 @@ popularity of their team. Teams are willing to invest time and money
 into finding different strategies that assist their organization. One
 such area that has received much attention is the idea of maximizing the
 expected win percentages of teams. This leads teams to look to
-strategies that may be outside of the culture norm.</p>
+strategies that may be outside of the cultural norm.</p>
 <p>For many years in the NFL there seemed to be a consistent standard
 that on 4th down your team will kick a field goal or punt the ball for
 better field position. The only exception being the dying moments in a
 game when teams are desperate. However data display tools have let us
 see an increase in the overall attempt percentage of teams on 4th down
-(Raymond, 2024). This is signalling a change in culture</p>
+(Raymond, 2024). This is signalling a change in culture.</p>
 <p>In the NFL there has been a increasing feeling that teams need to be
 more aggressive on 4th downs. We have seen teams adopt this strategy.
 Most famously is the Detroit lion’s mentality since the arrival of their
 current head coach Dan Campbell. The lions adopted a aggressive strategy
-to match their aggressive “biting off knee caps” mentality. While the
-lions have seen success for the first time in years they have also been
-criticized for their aggressive play calling. This was seen in the
-2023-24 playoff divisional round game in which the lions failed a 4th
-down attempt that was painted as unnecessary (Sporting News, 2024).
-After this failed 4th down attempt there seemed to be a shift in
-momentum and the lions lost the game.</p>
+to match their aggressive “biting off knee caps” mentality (Birkett,
+2023). While the lions have seen success for the first time in years
+they have also been criticized for their aggressive play calling. This
+was seen in the 2023-24 playoff divisional round game in which the lions
+failed a 4th down attempt that was painted as unnecessary (Sporting
+News, 2024). After this failed 4th down attempt there seemed to be a
+shift in momentum and the lions lost the game.</p>
 </div>
 <div id="research-problem" class="section level2">
 <h2>Research Problem</h2>
@@ -382,11 +382,11 @@ momentum and the lions lost the game.</p>
 right call?”. This question seems to be getting answered as “yes” by the
 current literature on this topic. However, we need to know if different
 teams should go for it or not go for it depending on their situation and
-team build. For example it could be argued that the lions should have
+team build. For example, it could be argued that the lions should have
 attempted the crucial 4th down in the 2023-24 playoff divisional round
-game. However if the panthers (which were a significantly worse team)
-where is that situation it could be argued that they should not have
-been as aggressive. This is because the panthers could have had a worse
+game. However, if the panthers (which were a significantly worse team)
+were is that situation it could be argued that they should not have been
+as aggressive. This is because the panthers could have had a worse
 chance of being able to convert on 4th down.</p>
 <p>On top of this we must be weary of any recommendation that is given
 to a head coach. The truth is that we are not on the field, in the
@@ -397,12 +397,12 @@ idea of being more practical and clear to coaches.</p>
 <div id="research-questions" class="section level2">
 <h2>Research Questions</h2>
 <p>This leads us to have a need to answer some key questions about 4th
-downs in the NFL. First is are there certain key predictable signals
-that can be used to decide if a given team should attempt a 4th down.
+downs in the NFL. First, is are there certain key predictable signals
+that can be used to decide if a given team should attempt a 4th down?
 Second, is what key factors or variables about players have predictive
-power in 4th down attempts. In other words are there players that are
+power in 4th down attempts? In other words are there players that are
 more important in 4th down situations when compared to other situations.
-Finally. do these key factors about players have a casual effect on the
+Finally, do these key factors about players have a casual effect on the
 outcome of 4th down attempts? Answering these questions will allow
 coaches to look for key signals in 4th down situations and to know which
 players to start on that 4th down if it is decided to attempt. This also
@@ -479,8 +479,10 @@ bias corrections with non-parametric models.</p>
 <ul>
 <li>Klein and Spady (1993)</li>
 <li>Das, Newey, and Vella (2003)</li>
-<li>Cook (2022)}</li>
+<li>Cook (2022)</li>
 </ul>
+<p>I currently am looking most specifically at semi-parametric
+models.</p>
 </div>
 <div id="research-gap" class="section level2">
 <h2>Research Gap</h2>
@@ -510,11 +512,12 @@ ranges from 2016 to 2023. The reason for this is that after 2016 the NFL
 started to put tracking chips in NFL player’s jerseys. This gives us
 information after 2016 of what players are on the field for each snap.
 As a note a weeks 16-18 in 2023 are missing gsis_ids of who was on the
-field and the data in 2016 is described as not as reliable.</p>
+field and the data in 2016 is described as not as reliable. A gsis_id is
+a unique identifier for a player and it crucial in our work.</p>
 <p>To create my data I have merged play by play data, participation
 data, roster data, and injury data. However, we may create different
 versions of our data depending on our models that we choose to use.</p>
-<p>First we have a third down data set. This data has the purpose of
+<p>First, we have a third down data set. This data has the purpose of
 allowing us to test our Heckman Variable’s validity in showing that a
 variable has no predictive power on a third down conversion. We then use
 this to bolster our argument that the variable in question has no
@@ -522,10 +525,10 @@ predictive power on a 4th down conversions. We also will have a fourth
 down “attempts” data set. This data set will be used to show that our
 Heckman Correction variable does have strong prediction power on the
 decision to attempt a 4th down or not. (this situation is more
-unbalanced). Finally the end goal is to be using data of purely 4th down
-attempts to predict the conversion of a play.</p>
-<p>While it is subject to change the 3rd down data set has 102,000+ rows
-and 1300+ columns. The 4th down attempts data set has 60,000+ rows and
+unbalanced). Finally, the end goal is to be using data of purely 4th
+down attempts to predict the conversion of a play.</p>
+<p>While it is subject to change the 3rd down data set has 56,000+ rows
+and 1300+ columns. The 4th down attempts data set has 33,000+ rows and
 1300+ columns.</p>
 </div>
 <div id="pro-football-focus-pff" class="section level2">
@@ -534,10 +537,10 @@ and 1300+ columns. The 4th down attempts data set has 60,000+ rows and
 Focus, (2024) from 2016 to 2023. This data is downloaded in the form of
 different positional reports. For example, we downloaded the receiving
 reports labeled as “Receiving Grades, Receiving Depth, Receiving
-Concept, and Receiving vs Scheme”. Each row in these reports would be
-how a player did in certain areas covered by that report that week. This
-however is useless to us as we needed to merge every report into each
-other.</p>
+Concept, and Receiving vs Scheme”. Each row in these reports contains
+information how a player did in certain areas covered by that report
+that week. This by itself is useless to us, as we need to merge every
+report into each other.</p>
 <p>We ended up with a data set that is 158,000+ rows and 1,500+ columns.
 Each column is a different stat that may or may not apply to a player
 (e.g. a receiving grade does not apply to a DE).</p>
@@ -547,28 +550,53 @@ player preformed in a specific week.</p>
 </div>
 <div id="merging" class="section level2">
 <h2>Merging</h2>
-<p>The most key aspect of this entire thesis is the merging of these two
-datasets. We can start with how in our pbp data we have the gsis_ids of
-every player that was on the field at the time of the play. A gisi_id is
-the main unique identifier for the player. So we need to take our PFF
-data and for each player merge it into the pbp data. The pbp data that
-we are merging it into has 9,000+ rows which each represent a 4th down
-attempt that a team intended to go for. This creates a data set with
-9,000+ rows and 25,000+ columns. The amount of columns is due to the
-specificness of the information that we have about players on the field.
-As we continue to merge this data and add or drop different types of
-variables this number of columns will change. I believe it will increase
-as we find new information. As our project proceeds we will narrow down
-our specificness as needed.</p>
-<p>A problem we are encountering is that the PFF players do not have a
+<p>A problem we encountered is that the PFF players do not have a
 gsis_id. They instead have a pff_id. Unfortunately not all players with
 a gsis_id have a available pff_id. On top of that the names between the
 data sets do not always match up. Currently I am working on different
-methods of matching these players between datasets. There also are
-multiple players with the same name. This match I currently believe can
-be done off of parts of names, positions, and teams. For the players
-that have a pff_id assigned to their gsis_id this matching process is
-not needed.</p>
+methods of matching these players between datasets. This match I
+currently am doing in a multi-step process off of standardized names,
+parts of names, positions, years played, and teams. For the players that
+have a pff_id assigned to their gsis_id this matching process is not
+needed. As a part of our contribution to this field of study I will be
+providing the dataset of 4900+ players with matched PFF and GSIS IDs. If
+you desire the code for this process to extend it to other years or play
+types please reach out to me via email.</p>
+<p>The most key aspect of this entire thesis is the merging of the PFF
+and PBP datasets. We can start with how in our PBP data we have the
+gsis_ids of every player that was on the field at the time of the play.
+A gisi_id is the main unique identifier for the player. So we need to
+take our PFF data and for each player merge it into the PBP data.</p>
+<p>We have multiple types of PBP datasets that we are merging PFF data
+into. First we have a 3rd down data set that is used to bolster our
+argument that are exogenous variable that is used for correction of self
+selection sample bias has no effect on 4th down completions.</p>
+<p>Our 4th down data set on the other hand has multiple uses. First, it
+will be used to show that our exogenous variable has a effect on the
+decision to attempt a 4th down. In this case the dependent variable is
+the decision to attempt a 4th down. Second, the 4th down data will be
+filtered down to situations where a team “went for it” with a run or a
+pass play. In this case the dependent variable is the completion of a
+4th down.</p>
+<p>I currently am hesitant to be stating the exact numbers of columns
+and rows within this data as these numbers will change as we engineer
+new features, generalize our existing features or filter our data more.
+However both the 3rd down and 4th down data currently have over 45,000
+columns without any forms of generalization. Our 3rd down data set
+currently consists of 56,000+ rows and our 4th down data set consists of
+33,000+ rows. However when our 4th down set is filtered to only include
+“went for it” plays we get 400-900 observations a year.</p>
+<p>Here are some general areas that the data captures:</p>
+<ul>
+<li>Game situation (down, distance, score, time remaining,
+location)</li>
+<li>Player specifics (“rushing years/passing yards/blocking grades” in
+the past seasons)</li>
+<li>Physical player traits (height, weight, age, etc.)</li>
+<li>Player injury history (e.g. days since last injruy)</li>
+<li>Team injury history (e.g. specific type of injuries in last
+week/year)</li>
+</ul>
 </div>
 </div>
 <div id="methodology" class="section level1">
@@ -664,7 +692,7 @@ semester (names matching).</li>
 <h1>Begining Analysis</h1>
 <pre class="r"><code>model_3rd3 &lt;- read_csv(&quot;model_3rd3.csv&quot;)</code></pre>
 <pre><code>## Rows: 7022 Columns: 20
-## ── Column specification ───────────────────
+## ── Column specification ────────────────────────────────────────────────────────
 ## Delimiter: &quot;,&quot;
 ## dbl (20): week, ydstogo, yardline_100, posteam_timeouts_remaining, defteam_t...
 ## 
@@ -672,7 +700,7 @@ semester (names matching).</li>
 ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 <pre class="r"><code>model_4th3 &lt;- read_csv(&quot;model_4th3.csv&quot;)</code></pre>
 <pre><code>## Rows: 4226 Columns: 19
-## ── Column specification ───────────────────
+## ── Column specification ────────────────────────────────────────────────────────
 ## Delimiter: &quot;,&quot;
 ## dbl (19): week, attempt, ydstogo, yardline_100, minutes_remaining, posteam_t...
 ## 
@@ -683,7 +711,8 @@ semester (names matching).</li>
 <ul>
 <li>For display purposes most of the code that produces the data and
 plots are not shown. However, the code will be made available via my
-personal github page ().</li>
+personal github page (<a href="https://github.com/SimonRaymond2003"
+class="uri">https://github.com/SimonRaymond2003</a>).</li>
 <li>The OLS model takes no account for Heteroskedasticity or
 Autocorrelation.</li>
 <li>The current data ignores how good the teams are (offensive and
@@ -1004,27 +1033,27 @@ model predicts attempts and is run with a ntree = 1500. We are reporting
 Out Of Bag results.</p>
 <pre class="r"><code># Print results
 print(importance_df)</code></pre>
-<pre><code>##        Variable           0           1 MeanDecreaseAccuracy MeanDecreaseGini
-## 1       ydstogo 125.4269824 183.2818606          193.5432330        327.60793
-## 2    score_diff  60.4299164 110.7947346          111.5743563        177.02412
-## 3       min_rem  60.1566875 100.0367519          102.8539127        193.93256
-## 4  yardline_100  45.1373398 105.2612785           91.4219768        200.11429
-## 5      offtimes  19.3535499  23.3109939           29.4424194         36.30884
-## 6      deftimes  20.5412507   4.2933397           20.9964538         26.19223
-## 7     down2_pct   1.7085776   5.8042999            4.6454135         75.50654
-## 8     down1_pct  -0.4045042   7.0423011            3.7189447         79.04593
-## 9          week  -1.3199223   8.1332725            3.5353990         59.00471
-## 10    down3_pct  -1.9806339   7.6795394            2.6598976         78.85979
-## 11         home  -2.4771793   5.6519962            1.3385270         14.63138
-## 12   random_var   0.8658669   0.9400077            1.2681888        106.79470
-## 13      KICKOFF   1.7673417  -1.9325312            0.4864511         14.01850
-## 14         dome  -2.1599300   1.8442765           -0.7063457         10.24486
-## 15     opp_scss  -3.6387216   2.5865796           -1.4687084         36.30426
-## 16         PUNT  -4.3943745   3.0799317           -2.0010136         12.81025
-## 17    opp_fails  -7.7064777   4.9857182           -3.7090732         38.59908
-## 18    prep_days  -5.2225004   0.6178269           -4.0869803         33.84337</code></pre>
+<pre><code>##        Variable          0           1 MeanDecreaseAccuracy MeanDecreaseGini
+## 1       ydstogo 126.002710 185.8722726          195.2746981        330.65192
+## 2    score_diff  62.623935 108.6540273          113.2869194        176.57889
+## 3       min_rem  59.775285 101.6495425          102.9746315        194.10616
+## 4  yardline_100  47.413516 106.6503391           96.9275630        199.55927
+## 5      offtimes  20.350509  25.9233860           31.6439314         35.75933
+## 6      deftimes  21.810413   3.1921930           21.4321912         26.21388
+## 7          week   0.184814   9.0178930            5.0208110         59.58649
+## 8     down1_pct   1.040355   7.1406478            4.9573135         78.50463
+## 9     down2_pct   2.341873   4.8599441            4.6730988         76.33280
+## 10    down3_pct  -2.834120   8.4329170            2.3459534         78.25188
+## 11      KICKOFF   3.322896  -2.1770402            1.6336814         13.59309
+## 12         home  -3.190402   6.2082496            1.1166262         14.37036
+## 13         dome  -2.998111   3.3339568           -0.4614668         10.29600
+## 14   random_var  -1.503282  -0.1644719           -1.3080810        106.82509
+## 15    prep_days  -4.433239   3.4822121           -1.6567989         33.23136
+## 16         PUNT  -2.835734  -0.3526549           -2.6332261         12.66409
+## 17     opp_scss  -5.791980   3.3702832           -2.9676177         36.36877
+## 18    opp_fails  -5.976563   3.5040960           -2.9795022         38.79649</code></pre>
 <pre class="r"><code>print(paste(&quot;OOB AUC:&quot;, round(oob_auc, 3)))</code></pre>
-<pre><code>## [1] &quot;OOB AUC: 0.882&quot;</code></pre>
+<pre><code>## [1] &quot;OOB AUC: 0.881&quot;</code></pre>
 <pre class="r"><code># Plot variable importance
 varImpPlot(rf4,
            sort = TRUE,
@@ -1055,27 +1084,27 @@ reporting Out Of Bag results.</p>
 <pre class="r"><code># Print results
 print(importance_df)</code></pre>
 <pre><code>##        Variable           0           1 MeanDecreaseAccuracy MeanDecreaseGini
-## 1       ydstogo 83.26665400 112.1676465          136.9220685        450.02512
-## 2          rush  6.79767077  28.9799743           26.9681142         62.40020
-## 3  yardline_100 15.68403825  -5.4463463            9.1741667        317.55940
-## 4       min_rem  7.24924977  -0.9983970            5.1106713        346.79810
-## 5     down3_pct  5.37955294  -2.8463265            2.4025145        245.61015
-## 6      deftimes  3.94955487  -1.4916276            2.1993010         61.94590
-## 7       KICKOFF -2.14623883   4.3024908            1.1593640         43.15927
-## 8      opp_scss -3.66393066   5.2077364            0.6420642        113.77046
-## 9     down2_pct -1.14526603   2.2859712            0.5076803        239.48743
-## 10   score_diff -0.06393452   0.5884626            0.3698348        224.95638
-## 11   random_var  0.92795191  -0.8957709            0.1288689        348.71014
-## 12    opp_fails -1.47268877   1.5292666           -0.1133539        122.17104
-## 13         week  1.49873140  -2.0823813           -0.1436457        183.01867
-## 14         PUNT -2.63984251   1.9757790           -0.7685443         41.87193
-## 15         dome -1.26794601  -0.4688593           -1.2560488         31.98814
-## 16         home -0.97968398  -1.2480465           -1.6523660         42.09237
-## 17    down1_pct -4.12220699   1.7642212           -2.2109387        241.67618
-## 18    prep_days -1.76557363  -1.7704162           -2.5582438        107.70782
-## 19     offtimes -3.79308213  -3.3649059           -5.1973632         59.38586</code></pre>
+## 1       ydstogo 83.05588524 113.3980429          135.4501676        450.67840
+## 2          rush  4.47797643  30.9748465           26.9545298         61.24723
+## 3  yardline_100 13.63186583  -5.5596880            7.0536067        317.15580
+## 4       min_rem  3.54461863   0.9815335            3.4842691        347.34838
+## 5     down3_pct  4.31802415  -3.2429980            1.2890553        244.78464
+## 6      opp_scss -1.48554389   3.5069321            1.0835659        114.50682
+## 7      deftimes  2.39263831  -2.1641496            0.5150940         61.97243
+## 8    score_diff -0.27079796   0.7225512            0.2600402        225.60373
+## 9     down2_pct -1.79179734   2.4421374            0.2068352        240.72539
+## 10      KICKOFF -3.61701302   4.1027136           -0.1029305         42.81354
+## 11    prep_days -0.06818342  -0.3356903           -0.2627515        108.04845
+## 12         week  0.22143290  -1.0075717           -0.4993756        183.80205
+## 13         PUNT -1.84481468   1.1133976           -0.6286028         41.50121
+## 14    opp_fails -2.82654634   0.2479793           -2.1148818        122.79910
+## 15         dome -2.67653420  -0.4402697           -2.4471017         32.10255
+## 16   random_var -0.15735623  -3.6936104           -2.4807033        347.91162
+## 17         home -1.80997483  -2.0503768           -2.6621262         42.00402
+## 18    down1_pct -4.88187596   0.8716234           -3.3666895        241.30277
+## 19     offtimes -4.05956285  -2.0547905           -4.6976606         59.08749</code></pre>
 <pre class="r"><code>print(paste(&quot;OOB AUC:&quot;, round(oob_auc, 3)))</code></pre>
-<pre><code>## [1] &quot;OOB AUC: 0.669&quot;</code></pre>
+<pre><code>## [1] &quot;OOB AUC: 0.668&quot;</code></pre>
 <pre class="r"><code># Plot variable importance
 varImpPlot(rf3,
            sort = TRUE,
@@ -1145,9 +1174,9 @@ abline(h = mean(auc) + 1.96 * sd(auc), col = &quot;green&quot;, lwd = 2, lty = 3
 <p><img src="index_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
 <pre class="r"><code># Print summary statistics
 cat(&quot;Mean AUC:&quot;, mean(auc), &quot;\n&quot;)</code></pre>
-<pre><code>## Mean AUC: 0.7948716</code></pre>
+<pre><code>## Mean AUC: 0.7951987</code></pre>
 <pre class="r"><code>cat(&quot;95% CI: [&quot;, mean(auc) - 1.96 * sd(auc), &quot;,&quot;, mean(auc) + 1.96 * sd(auc), &quot;]\n&quot;)</code></pre>
-<pre><code>## 95% CI: [ 0.7735098 , 0.8162334 ]</code></pre>
+<pre><code>## 95% CI: [ 0.774153 , 0.8162443 ]</code></pre>
 <p>We see a significantly worse performance then with a random forest
 model.</p>
 </div>
@@ -1226,6 +1255,10 @@ economic impact of successful National Football League franchises.
 <em>Economic Inquiry</em>, 48(1), 39–50. <a
 href="https://doi.org/10.1111/j.1465-7295.2008.00124.x"
 class="uri">https://doi.org/10.1111/j.1465-7295.2008.00124.x</a></p>
+<p>Birkett, D. (2024, January 21). On this date: Memorable kneecap
+speech. Sports Illustrated. Retrieved from <a
+href="https://www.si.com/nfl/lions/news/on-this-date-memorable-kneecap-speech"
+class="uri">https://www.si.com/nfl/lions/news/on-this-date-memorable-kneecap-speech</a></p>
 </div>
 
 
