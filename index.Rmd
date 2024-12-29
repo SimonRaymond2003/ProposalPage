@@ -1,5 +1,5 @@
 ---
-title: "A Predictive and Casual Analysis of Contributing Factors for 4th Down Attempt Conversions in the NFL"
+title: "A Predictive and Causal Analysis of Contributing Factors for 4th Down Attempt Conversions in the NFL"
 author: "Simon Raymond"
 date: "2024-12-04"
 output:
@@ -28,7 +28,7 @@ On top of this we must be weary of any recommendation that is given to a head co
 
 ## Research Questions
 
-This leads us to have a need to answer some key questions about 4th downs in the NFL. First, is are there certain key predictable signals that can be used to decide if a given team should attempt a 4th down? Second, is what key factors or variables about players have predictive power in 4th down attempts? In other words are there players that are more important in 4th down situations when compared to other situations. Finally, do these key factors about players have a casual effect on the outcome of 4th down attempts? Answering these questions will allow coaches to look for key signals in 4th down situations and to know which players to start on that 4th down if it is decided to attempt. This also can be applied in discovering specialty players that are overlooked due to poor performances in situations that are not similar to 4th down.
+This leads us to have a need to answer some key questions about 4th downs in the NFL. First, is are there certain key predictable signals that can be used to decide if a given team should attempt a 4th down? Second, is what key factors or variables about players have predictive power in 4th down attempts? In other words are there players that are more important in 4th down situations when compared to other situations. Finally, do these key factors about players have a causal effect on the outcome of 4th down attempts? Answering these questions will allow coaches to look for key signals in 4th down situations and to know which players to start on that 4th down if it is decided to attempt. This also can be applied in discovering specialty players that are overlooked due to poor performances in situations that are not similar to 4th down.
 
 # Literature Review
 
@@ -64,7 +64,7 @@ I currently am looking most specifically at semi-parametric models.
 
 ## Research Gap
 
-The gap in the current research revolves around the gap in quality data. Currently we see many studies include team grades or summary statistics about teams that are playing against each other. This type of generalization is needed for econometric models that cannot handle large amounts of variables. However, our non-parametric models will be able to handle data with thousands of different variables. To take advantage of this we will have information about every single player that is on the field when the ball is snapped. This will allow us to have better prediction power then previous researchers. This lack of work accomplished with highly specific data then in turn creates a lack in researchers identifying key variables about different players in the field. This is why our combined approach of predictive and casual tools will be so effective. We will be able to see what variable are or are not having a effect on 4th down conversions.
+The gap in the current research revolves around the gap in quality data. Currently we see many studies include team grades or summary statistics about teams that are playing against each other. This type of generalization is needed for econometric models that cannot handle large amounts of variables. However, our non-parametric models will be able to handle data with thousands of different variables. To take advantage of this we will have information about every single player that is on the field when the ball is snapped. This will allow us to have better prediction power then previous researchers. This lack of work accomplished with highly specific data then in turn creates a lack in researchers identifying key variables about different players in the field. This is why our combined approach of predictive and causal tools will be so effective. We will be able to see what variable are or are not having a effect on 4th down conversions.
 
 # Data
 
@@ -113,15 +113,15 @@ Here are some general areas that the data captures:
 
 In order to measure the accuracy of our models we will be using the area under the curve (AUC) of the ROC curve. This is a common metric used in binary classification problems. The ROC curve is a plot of the true positive rate against the false positive rate for the different possible thresholds of a confusion table. These values will be tested and reported over 10,000 tests of bootstrapped test data.
 
-Our methodology involves two main types of tools. These are predictive tools and casual econometrics tools.
+Our methodology involves two main types of tools. These are predictive tools and causal econometrics tools.
 
 ## Predictive Tools
 
 These tools are going to be used to predict the outcome of a 4th down attempt. If these outcomes of these predictions are acceptable we will identify what variables had predictive power in our non-parametric models. The models that will be used are Random Forest, GBM boosting, XGBoosting, and possibly Neural Networks. All boosting models will be tuned with some form of grid search.
 
-## Casual econometrics tools
+## Causal econometrics tools
 
-After our predictive modeling we will be left with variables that have prediction power on the outcome of a 4th down attempt. Then we turn to our casual econometrics tools. Our situation faces one key problem. There is selection bias around the 4th down attempts. This means that we never see the outcomes of 4th down attempts that never happened. In those situations the ball was punted or a field goal was attempted. To try to control this selection bias we will be using a Heckman correction. A form of OLS can be pursued with the Heckman correction. However, we will also be looking to apply some form of non-linear model to our situation. This is due to the intense non-linearities that are found in NFL data.
+After our predictive modeling we will be left with variables that have prediction power on the outcome of a 4th down attempt. Then we turn to our causal econometrics tools. Our situation faces one key problem. There is selection bias around the 4th down attempts. This means that we never see the outcomes of 4th down attempts that never happened. In those situations the ball was punted or a field goal was attempted. To try to control this selection bias we will be using a Heckman correction. A form of OLS can be pursued with the Heckman correction. However, we will also be looking to apply some form of non-linear model to our situation. This is due to the intense non-linearities that are found in NFL data.
 
 This self selectiong bias is created in our current world by the fact that the coach is making a decision about "going for it" or not "going for it" on 4th down. When we control for this we are attempting to create a world where the 4th down attempts that we see are free from bias. This is to say it creates a world where we do actaully see all the 4th down attempts that could have happened.
 
@@ -133,7 +133,7 @@ This seems to be backed up by the [beginnings of my analysis](#begining-analysis
 
 # Expected Outcomes
 
-Currently we are predicting 3rd down conversions with a AUC that is in the mid 60s range. This is not incredible but it makes sense as the baseline predictions only account for some basic situation variables. I expect to have presentable AUC in the 80s range when we work on our properly merged 4th down data set. Then i believe that variables will be identified that will be proven to have a casual effect on 4th down conversions. In this process however it is important to recognize the significance of finding a variable to not have prediction power or a casual effect.
+Currently we are predicting 3rd down conversions with a AUC that is in the mid 60s range. This is not incredible but it makes sense as the baseline predictions only account for some basic situation variables. I expect to have presentable AUC in the 80s range when we work on our properly merged 4th down data set. Then i believe that variables will be identified that will be proven to have a causal effect on 4th down conversions. In this process however it is important to recognize the significance of finding a variable to not have prediction power or a causal effect.
 
 # Timeline
 
@@ -358,7 +358,7 @@ Here is the PDP of the random variable:
 pdp_random
 ```
 
-This plot will seem confusing. Why does a useless simulated variable seem to have predictive power. This random variable does not have predictive power or a casual effect just because of the PDP plot! As we will see, this random variable has negative MDA. While it has a very high MDI that is simply due to the specificness of the variable. This plot displays how the random forest model is using it. Models like random forest and XGBoosting are designed to give a voice to weak predictors. The PDP simply shows how the model is using that variable. The model may be incorrectly picking up on a pattern that is not truly within our data. This is proven by the variable's lack of use near to the center of its probability distribution. However, as we move away from the from the center of the random variable's distribion we get more specificness that the random forest model thinks is useful for prediction. There are less observations near the tails of our distribution and therefore more opportunities to make a obscure split to help our leaf node purity(gini score) in the training process. This example needs to serve as a strong caution when observing our PDP plots in the following analysis. 
+This plot will seem confusing. Why does a useless simulated variable seem to have predictive power. This random variable does not have predictive power or a causal effect just because of the PDP plot! As we will see, this random variable has negative MDA. While it has a very high MDI that is simply due to the specificness of the variable. This plot displays how the random forest model is using it. Models like random forest and XGBoosting are designed to give a voice to weak predictors. The PDP simply shows how the model is using that variable. The model may be incorrectly picking up on a pattern that is not truly within our data. This is proven by the variable's lack of use near to the center of its probability distribution. However, as we move away from the from the center of the random variable's distribion we get more specificness that the random forest model thinks is useful for prediction. There are less observations near the tails of our distribution and therefore more opportunities to make a obscure split to help our leaf node purity(gini score) in the training process. This example needs to serve as a strong caution when observing our PDP plots in the following analysis. 
 
 ## The Data
 

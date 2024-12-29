@@ -13,7 +13,7 @@
 
 <meta name="date" content="2024-12-04" />
 
-<title>A Predictive and Casual Analysis of Contributing Factors for 4th Down Attempt Conversions in the NFL</title>
+<title>A Predictive and Causal Analysis of Contributing Factors for 4th Down Attempt Conversions in the NFL</title>
 
 <script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -336,7 +336,7 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">A Predictive and Casual Analysis of
+<h1 class="title toc-ignore">A Predictive and Causal Analysis of
 Contributing Factors for 4th Down Attempt Conversions in the NFL</h1>
 <h4 class="author">Simon Raymond</h4>
 <h4 class="date">2024-12-04</h4>
@@ -402,7 +402,7 @@ that can be used to decide if a given team should attempt a 4th down?
 Second, is what key factors or variables about players have predictive
 power in 4th down attempts? In other words are there players that are
 more important in 4th down situations when compared to other situations.
-Finally, do these key factors about players have a casual effect on the
+Finally, do these key factors about players have a causal effect on the
 outcome of 4th down attempts? Answering these questions will allow
 coaches to look for key signals in 4th down situations and to know which
 players to start on that 4th down if it is decided to attempt. This also
@@ -497,7 +497,7 @@ field when the ball is snapped. This will allow us to have better
 prediction power then previous researchers. This lack of work
 accomplished with highly specific data then in turn creates a lack in
 researchers identifying key variables about different players in the
-field. This is why our combined approach of predictive and casual tools
+field. This is why our combined approach of predictive and causal tools
 will be so effective. We will be able to see what variable are or are
 not having a effect on 4th down conversions.</p>
 </div>
@@ -610,7 +610,7 @@ true positive rate against the false positive rate for the different
 possible thresholds of a confusion table. These values will be tested
 and reported over 10,000 tests of bootstrapped test data.</p>
 <p>Our methodology involves two main types of tools. These are
-predictive tools and casual econometrics tools.</p>
+predictive tools and causal econometrics tools.</p>
 </div>
 <div id="predictive-tools" class="section level2">
 <h2>Predictive Tools</h2>
@@ -621,11 +621,11 @@ models. The models that will be used are Random Forest, GBM boosting,
 XGBoosting, and possibly Neural Networks. All boosting models will be
 tuned with some form of grid search.</p>
 </div>
-<div id="casual-econometrics-tools" class="section level2">
-<h2>Casual econometrics tools</h2>
+<div id="causal-econometrics-tools" class="section level2">
+<h2>Causal econometrics tools</h2>
 <p>After our predictive modeling we will be left with variables that
 have prediction power on the outcome of a 4th down attempt. Then we turn
-to our casual econometrics tools. Our situation faces one key problem.
+to our causal econometrics tools. Our situation faces one key problem.
 There is selection bias around the 4th down attempts. This means that we
 never see the outcomes of 4th down attempts that never happened. In
 those situations the ball was punted or a field goal was attempted. To
@@ -675,10 +675,10 @@ in the mid 60s range. This is not incredible but it makes sense as the
 baseline predictions only account for some basic situation variables. I
 expect to have presentable AUC in the 80s range when we work on our
 properly merged 4th down data set. Then i believe that variables will be
-identified that will be proven to have a casual effect on 4th down
+identified that will be proven to have a causal effect on 4th down
 conversions. In this process however it is important to recognize the
 significance of finding a variable to not have prediction power or a
-casual effect.</p>
+causal effect.</p>
 </div>
 <div id="timeline" class="section level1">
 <h1>Timeline</h1>
@@ -788,7 +788,7 @@ pdp_random</code></pre>
 <p><img src="index_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
 <p>This plot will seem confusing. Why does a useless simulated variable
 seem to have predictive power. This random variable does not have
-predictive power or a casual effect just because of the PDP plot! As we
+predictive power or a causal effect just because of the PDP plot! As we
 will see, this random variable has negative MDA. While it has a very
 high MDI that is simply due to the specificness of the variable. This
 plot displays how the random forest model is using it. Models like
@@ -1033,25 +1033,25 @@ model predicts attempts and is run with a ntree = 1500. We are reporting
 Out Of Bag results.</p>
 <pre class="r"><code># Print results
 print(importance_df)</code></pre>
-<pre><code>##        Variable          0           1 MeanDecreaseAccuracy MeanDecreaseGini
-## 1       ydstogo 126.002710 185.8722726          195.2746981        330.65192
-## 2    score_diff  62.623935 108.6540273          113.2869194        176.57889
-## 3       min_rem  59.775285 101.6495425          102.9746315        194.10616
-## 4  yardline_100  47.413516 106.6503391           96.9275630        199.55927
-## 5      offtimes  20.350509  25.9233860           31.6439314         35.75933
-## 6      deftimes  21.810413   3.1921930           21.4321912         26.21388
-## 7          week   0.184814   9.0178930            5.0208110         59.58649
-## 8     down1_pct   1.040355   7.1406478            4.9573135         78.50463
-## 9     down2_pct   2.341873   4.8599441            4.6730988         76.33280
-## 10    down3_pct  -2.834120   8.4329170            2.3459534         78.25188
-## 11      KICKOFF   3.322896  -2.1770402            1.6336814         13.59309
-## 12         home  -3.190402   6.2082496            1.1166262         14.37036
-## 13         dome  -2.998111   3.3339568           -0.4614668         10.29600
-## 14   random_var  -1.503282  -0.1644719           -1.3080810        106.82509
-## 15    prep_days  -4.433239   3.4822121           -1.6567989         33.23136
-## 16         PUNT  -2.835734  -0.3526549           -2.6332261         12.66409
-## 17     opp_scss  -5.791980   3.3702832           -2.9676177         36.36877
-## 18    opp_fails  -5.976563   3.5040960           -2.9795022         38.79649</code></pre>
+<pre><code>##        Variable           0           1 MeanDecreaseAccuracy MeanDecreaseGini
+## 1       ydstogo 128.3776588 184.9195811          194.9664915        331.02022
+## 2    score_diff  58.3362287 107.8235360          106.8486652        175.77437
+## 3       min_rem  61.0235720 102.0208674          106.0755778        193.36266
+## 4  yardline_100  46.3682820 100.4464025           92.9058081        200.66178
+## 5      offtimes  20.3132226  24.9660314           30.5174698         35.72953
+## 6      deftimes  20.6352153   4.1188456           20.5829241         25.98792
+## 7     down2_pct   2.6882890   5.4946506            5.5122539         75.82592
+## 8          week   1.0428675   7.8936492            5.2688112         59.05451
+## 9     down1_pct  -0.1891038   7.0547685            3.8900801         78.32605
+## 10      KICKOFF   3.7975574  -0.8085122            2.8402099         13.74549
+## 11    down3_pct  -2.2270722   8.2577231            2.6427479         78.76586
+## 12         home  -4.5502455   6.2909084            0.1623211         14.47680
+## 13         dome  -0.5719003  -0.7207822           -0.8625162         10.31041
+## 14     opp_scss  -4.0590149   3.7005650           -1.3323968         36.47057
+## 15    opp_fails  -4.8744180   4.6774606           -1.5526255         38.51617
+## 16    prep_days  -3.3042718   1.0488780           -2.2124134         34.10634
+## 17   random_var  -2.0803903  -1.8506782           -2.7384948        107.18541
+## 18         PUNT  -3.9225869  -0.3527174           -3.5134040         12.69960</code></pre>
 <pre class="r"><code>print(paste(&quot;OOB AUC:&quot;, round(oob_auc, 3)))</code></pre>
 <pre><code>## [1] &quot;OOB AUC: 0.881&quot;</code></pre>
 <pre class="r"><code># Plot variable importance
@@ -1083,28 +1083,28 @@ model predicts conversion and is run with a ntree = 1500. We are
 reporting Out Of Bag results.</p>
 <pre class="r"><code># Print results
 print(importance_df)</code></pre>
-<pre><code>##        Variable           0           1 MeanDecreaseAccuracy MeanDecreaseGini
-## 1       ydstogo 83.05588524 113.3980429          135.4501676        450.67840
-## 2          rush  4.47797643  30.9748465           26.9545298         61.24723
-## 3  yardline_100 13.63186583  -5.5596880            7.0536067        317.15580
-## 4       min_rem  3.54461863   0.9815335            3.4842691        347.34838
-## 5     down3_pct  4.31802415  -3.2429980            1.2890553        244.78464
-## 6      opp_scss -1.48554389   3.5069321            1.0835659        114.50682
-## 7      deftimes  2.39263831  -2.1641496            0.5150940         61.97243
-## 8    score_diff -0.27079796   0.7225512            0.2600402        225.60373
-## 9     down2_pct -1.79179734   2.4421374            0.2068352        240.72539
-## 10      KICKOFF -3.61701302   4.1027136           -0.1029305         42.81354
-## 11    prep_days -0.06818342  -0.3356903           -0.2627515        108.04845
-## 12         week  0.22143290  -1.0075717           -0.4993756        183.80205
-## 13         PUNT -1.84481468   1.1133976           -0.6286028         41.50121
-## 14    opp_fails -2.82654634   0.2479793           -2.1148818        122.79910
-## 15         dome -2.67653420  -0.4402697           -2.4471017         32.10255
-## 16   random_var -0.15735623  -3.6936104           -2.4807033        347.91162
-## 17         home -1.80997483  -2.0503768           -2.6621262         42.00402
-## 18    down1_pct -4.88187596   0.8716234           -3.3666895        241.30277
-## 19     offtimes -4.05956285  -2.0547905           -4.6976606         59.08749</code></pre>
+<pre><code>##        Variable          0            1 MeanDecreaseAccuracy MeanDecreaseGini
+## 1       ydstogo 84.8849102 109.83354943          138.1792561        450.64782
+## 2          rush  5.1045943  29.26488335           25.6772912         60.94369
+## 3  yardline_100 13.3481635  -3.60466586            8.1943532        316.88944
+## 4       min_rem  6.1017157  -2.03669074            3.4752576        346.91402
+## 5      deftimes  5.3766533  -3.01583477            2.5305501         62.45924
+## 6       KICKOFF -2.6694803   6.57379863            2.3067734         43.19627
+## 7     prep_days  2.0370688   0.02045017            1.6103525        107.55876
+## 8          week  1.4812732   0.37859180            1.4244011        183.64345
+## 9      opp_scss -2.0132104   4.26012253            1.1872083        114.86652
+## 10   score_diff -0.9688468   2.92822746            1.1572910        225.37077
+## 11    down3_pct  5.0459193  -4.57964419            1.0032226        245.25873
+## 12    down2_pct -1.9799071   3.21517240            0.6180871        241.73622
+## 13         PUNT -1.9186395   1.89975610           -0.2134718         41.92434
+## 14    opp_fails -2.4490722   1.96388368           -0.6028369        122.25850
+## 15   random_var -0.3536650  -2.61442148           -2.0143149        346.20268
+## 16         dome -1.6308636  -1.47703308           -2.2675037         32.04716
+## 17         home -3.0912174  -0.92232375           -3.0294259         42.34369
+## 18     offtimes -3.1572002  -1.21363225           -3.2536413         59.38493
+## 19    down1_pct -7.1733232   1.17392164           -4.8973686        242.17372</code></pre>
 <pre class="r"><code>print(paste(&quot;OOB AUC:&quot;, round(oob_auc, 3)))</code></pre>
-<pre><code>## [1] &quot;OOB AUC: 0.668&quot;</code></pre>
+<pre><code>## [1] &quot;OOB AUC: 0.669&quot;</code></pre>
 <pre class="r"><code># Plot variable importance
 varImpPlot(rf3,
            sort = TRUE,
@@ -1174,9 +1174,9 @@ abline(h = mean(auc) + 1.96 * sd(auc), col = &quot;green&quot;, lwd = 2, lty = 3
 <p><img src="index_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
 <pre class="r"><code># Print summary statistics
 cat(&quot;Mean AUC:&quot;, mean(auc), &quot;\n&quot;)</code></pre>
-<pre><code>## Mean AUC: 0.7951987</code></pre>
+<pre><code>## Mean AUC: 0.794873</code></pre>
 <pre class="r"><code>cat(&quot;95% CI: [&quot;, mean(auc) - 1.96 * sd(auc), &quot;,&quot;, mean(auc) + 1.96 * sd(auc), &quot;]\n&quot;)</code></pre>
-<pre><code>## 95% CI: [ 0.774153 , 0.8162443 ]</code></pre>
+<pre><code>## 95% CI: [ 0.7728226 , 0.8169233 ]</code></pre>
 <p>We see a significantly worse performance then with a random forest
 model.</p>
 </div>
